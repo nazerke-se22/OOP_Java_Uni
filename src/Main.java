@@ -7,11 +7,13 @@ public class Main {
     public static void main(String[] args) {
         Professor professor1=new Professor("Alex","alex97@gmail.com",5);
         Professor professor2=new Professor("Sanzhar","sanzhar@gmail.com",3);
-
+        Professor professor3=new Professor();
         System.out.println("Professor 1:");
         professor1.displayProfessor();
         System.out.println("Professor 2:");
         professor2.displayProfessor();
+        System.out.println("Professor 3:");
+        professor3.displayProfessor();
 
         Course course1=new Course("Calculus1",2115,5);
         Course course2=new Course("Linear algebra",3457,5);
