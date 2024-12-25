@@ -17,17 +17,23 @@ public class Main {
 
         Course course1=new Course("Calculus1",2115,5);
         Course course2=new Course("Linear algebra",3457,5);
+        Course course3=new Course();
         System.out.println("Course 1:");
         course1.displayCourse();
         System.out.println("Course 2:");
         course2.displayCourse();
+        System.out.println("Course 3:");
+        course3.displayCourse();
 
         University university1=new University("AITU","Astana");
         University university2=new University("KBTU","Almaty");
+        University university3=new University();
         System.out.println("University 1:");
         university1.displayUniversity();
         System.out.println("University 2:");
         university2.displayUniversity();
+        System.out.println("University 3:");
+        university3.displayUniversity();
 
         boolean sameCourseCredits = course1.getCredits() == course2.getCredits();
         System.out.println("Do the two courses have the same number of credits? " + sameCourseCredits);

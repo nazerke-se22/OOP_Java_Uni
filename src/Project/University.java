@@ -9,6 +9,11 @@ public class University {
         this.Location=Location;
     }
 
+    public University(){
+        this.Name="SNU";
+        this.Location="South Korea";
+    }
+
     public String getName(){
         return Name;
     }

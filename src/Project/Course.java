@@ -10,6 +10,11 @@ public class Course {
         this.Code=Code;
         this.Credits=Credits;
     }
+    public Course(){
+        this.CourseName="Inroduction to programming";
+        this.Code=1451;
+        this.Credits=5;
+    }
 
     public String getCourseName(){
         return CourseName;
