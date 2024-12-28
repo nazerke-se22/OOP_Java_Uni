@@ -41,8 +41,8 @@ public class Professor {
     }
 
     public void displayProfessor(){//вывод и метод
-        System.out.println("Name: "+Name);
-        System.out.println("Email: "+Email);
-        System.out.println("Experience Years: "+experienceYears);
+        System.out.println("Hello I'm pofessor "+ Name + "!");
+        System.out.println("My email: "+Email);
+        System.out.println("My work experience is "+experienceYears + " years! Nice to meet you!");
     }
 }
