@@ -1,48 +1,62 @@
 package Project;
+import java.util.Objects;
 
 public class Professor {
-    private String Name;
-    private String Email;
+    private String name;
+    private String email;
     private int experienceYears;
 
-
-    public Professor(String Name, String Email, int experienceYears) {
-        this.Name = Name;//поля,парметр
-        this.Email = Email;
+    public Professor(String name, String email, int experienceYears) {
+        this.name = name;
+        this.email = email;
         this.experienceYears = experienceYears;
     }
-    public Professor(){
-        this.Name = "Maqsat";
-        this.Email = "maqsat@gmail.com";
-        this.experienceYears = 7;
+
+    public Professor() {
+        this.name = "Default Professor";
+        this.email = "default@gmail.com";
+        this.experienceYears = 5;
     }
 
-    public String getName(){//возвращает значение определенного поля объекта
-        return Name;
+    public String getName() {
+        return name;
     }
-    public void setName(String Name){//устанавливает значение определенного поля объекта
 
-        this.Name=Name;
+    public void setName(String name) {
+        this.name = name;
     }
-    public String getEmail(){
 
-        return Email;
+    public String getEmail() {
+        return email;
     }
-    public void setEmail(String Email){
 
-        this.Email=Email;
+    public void setEmail(String email) {
+        this.email = email;
     }
-    public int getExperienceYears(){
 
+    public int getExperienceYears() {
         return experienceYears;
     }
-    public void setexperienceYears(int experienceYears){
-        this.experienceYears=experienceYears;
+
+    public void setExperienceYears(int experienceYears) {
+        this.experienceYears = experienceYears;
     }
 
-    public void displayProfessor(){//вывод и метод
-        System.out.println("Hello I'm pofessor "+ Name + "!");
-        System.out.println("My email: "+Email);
-        System.out.println("My work experience is "+experienceYears + " years! Nice to meet you!");
+    @Override
+    public String toString() {
+        return "Professor{name='" + name + "', email='" + email + "', experienceYears=" + experienceYears + "}";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Professor)) return false;
+        Professor that = (Professor) o;
+        return experienceYears == that.experienceYears && Objects.equals(name, that.name) && Objects.equals(email, that.email);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, email, experienceYears);
     }
 }

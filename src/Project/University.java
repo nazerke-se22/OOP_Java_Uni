@@ -1,38 +1,52 @@
 package Project;
 
+import java.util.Objects;
+
 public class University {
-    private String Name;
-    private String Location;
+    private String name;
+    private String location;
 
-    public University(String Name,String Location){
-        this.Name=Name;
-        this.Location=Location;
+    public University(String name, String location) {
+        this.name = name;
+        this.location = location;
     }
 
-    public University(){
-        this.Name="SNU";
-        this.Location="South Korea";
+    public University() {
+        this.name = "Default University";
+        this.location = "Default Location";
     }
 
-    public String getName(){
-        return Name;
-    }
-    public void setName(String Name){
-
-        this.Name=Name;
-    }
-    public String getLocation(){
-
-        return Location;
-    }
-    public void setLocation(String Location){
-
-        this.Location=Location;
+    public String getName() {
+        return name;
     }
 
-    public void displayUniversity(){
-        System.out.println("Name: "+Name);
-        System.out.println("Location: "+Location);
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    @Override
+    public String toString() {
+        return "University{name='" + name + "', location='" + location + "'}";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof University)) return false;
+        University that = (University) o;
+        return Objects.equals(name, that.name) && Objects.equals(location, that.location);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, location);
     }
 }
-

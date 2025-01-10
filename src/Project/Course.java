@@ -1,42 +1,63 @@
 package Project;
 
+import java.util.Objects;
+
 public class Course {
-    private String CourseName;
-    private int Code;
-    private int Credits;
+    private String courseName;
+    private int code;
+    private int credits;
 
-    public Course(String CourseName, int Code,int Credits){
-        this.CourseName=CourseName;
-        this.Code=Code;
-        this.Credits=Credits;
-    }
-    public Course(){
-        this.CourseName="Inroduction to programming";
-        this.Code=1451;
-        this.Credits=5;
+    public Course(String courseName, int code, int credits) {
+        this.courseName = courseName;
+        this.code = code;
+        this.credits = credits;
     }
 
-    public String getCourseName(){
-        return CourseName;
+    public Course() {
+        this.courseName = "Introduction to Programming";
+        this.code = 1451;
+        this.credits = 5;
     }
-    public void setCourseName(String CourseName){
-        this.CourseName=CourseName;
+
+    public String getCourseName() {
+        return courseName;
     }
-    public int getCode(){
-        return Code;
+
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
     }
-    public void setCode(int Code){
-        this.Code=Code;
+
+    public int getCode() {
+        return code;
     }
-    public int getCredits(){
-        return Credits;
+
+    public void setCode(int code) {
+        this.code = code;
     }
-    public void setCredits(int Credits){
-        this.Credits=Credits;
+
+    public int getCredits() {
+        return credits;
     }
-    public void displayCourse(){
-        System.out.println("Name: "+CourseName);
-        System.out.println("Code: "+Code);
-        System.out.println("Credits: "+Credits);
+
+    public void setCredits(int credits) {
+        this.credits = credits;
+    }
+
+    @Override
+    public String toString() {
+        return "Course{courseName='" + courseName + "', code=" + code + ", credits=" + credits + "}";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Course)) return false;
+        Course course = (Course) o;
+        return code == course.code && credits == course.credits && Objects.equals(courseName, course.courseName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(courseName, code, credits);
     }
 }
