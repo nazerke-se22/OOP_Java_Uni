@@ -19,14 +19,14 @@ public class UniversityManager {
     public void addUniversity(University university){
         universities.add(university);
     }
-    // Filtering: Get all courses with credits greater than a certain value
+    // Filtering
     public List<Course> filterCoursesByCredits(int minCredits) {
         return courses.stream()
                 .filter(course -> course.getCredits() >= minCredits)
                 .collect(Collectors.toList());
     }
 
-    // Searching: Find a professor by name
+    // Searching
     public Professor searchProfessorByName(String name) {
         return professors.stream()
                 .filter(professor -> professor.getName().equalsIgnoreCase(name))
@@ -34,11 +34,10 @@ public class UniversityManager {
                 .orElse(null);
     }
 
-    // Sorting: Sort universities by name
+    // Sorting
     public List<University> sortUniversitiesByName() {
         return universities.stream()
                 .sorted(Comparator.comparing(University::getName))
                 .collect(Collectors.toList());
     }
 }
-

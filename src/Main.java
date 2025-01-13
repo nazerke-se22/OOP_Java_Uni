@@ -6,7 +6,7 @@ public class Main {
 
         // Add courses
         manager.addCourse(new Course("Calculus", 101, 5));
-        manager.addCourse(new Course("Algorithms", 102, 3));
+        manager.addCourse(new Course("Political science", 102, 3));
         manager.addCourse(new Course("Linear Algebra", 103, 4));
 
         // Add professors
@@ -14,8 +14,8 @@ public class Main {
         manager.addProfessor(new Professor("Jane Smith", "jane.smith@example.com", 8));
 
         // Add universities
-        manager.addUniversity(new University("Harvard", "USA"));
-        manager.addUniversity(new University("Oxford", "UK"));
+        manager.addUniversity(new University("AITU", "Astana"));
+        manager.addUniversity(new University("KBTU", "Almaty"));
 
         // Filtering
         System.out.println("Courses with credits >= 4:");

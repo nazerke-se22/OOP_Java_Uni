@@ -11,10 +11,10 @@ public class Professor {
         this.email = email;
         this.experienceYears = experienceYears;
     }
-
+//default
     public Professor() {
-        this.name = "Default Professor";
-        this.email = "default@gmail.com";
+        this.name = "Michael Lorn";
+        this.email = "Michael@gmail.com";
         this.experienceYears = 5;
     }
 

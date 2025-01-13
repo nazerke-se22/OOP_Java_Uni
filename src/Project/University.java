@@ -3,6 +3,7 @@ package Project;
 import java.util.Objects;
 
 public class University {
+    //Encapsulation
     private String name;
     private String location;
 
@@ -12,10 +13,10 @@ public class University {
     }
 
     public University() {
-        this.name = "Default University";
-        this.location = "Default Location";
+        this.name = "Narxoz University";
+        this.location = "Almaty";
     }
-
+    //encapsulation
     public String getName() {
         return name;
     }
@@ -31,12 +32,12 @@ public class University {
     public void setLocation(String location) {
         this.location = location;
     }
-
-    @Override
+    // Override toString
+    @Override// Polymorphism: Method Overriding
     public String toString() {
         return "University{name='" + name + "', location='" + location + "'}";
     }
-
+    // Override equals
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -44,9 +45,9 @@ public class University {
         University that = (University) o;
         return Objects.equals(name, that.name) && Objects.equals(location, that.location);
     }
-
+    // Override hashCode
     @Override
-    public int hashCode() {
+    public int hashCode() {//unique Hashmap
         return Objects.hash(name, location);
     }
 }
