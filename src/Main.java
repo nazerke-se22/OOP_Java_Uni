@@ -43,8 +43,7 @@ public class Main {
 
         System.out.println("Updated: " + exchangeUni);
 
-        ExchangeUniversity anotherExchangeUni = new ExchangeUniversity(
-                "AITU", "Astana", "Bob Smith", "Harvard", 3.8);
+        ExchangeUniversity anotherExchangeUni = new ExchangeUniversity("AITU", "Astana", "Bob Smith", "Harvard", 3.8);
 
         System.out.println("Universities are equal: " + exchangeUni.equals(anotherExchangeUni));
     }
