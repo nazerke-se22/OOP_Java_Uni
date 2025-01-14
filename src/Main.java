@@ -16,6 +16,8 @@ public class Main {
         // Add universities
         manager.addUniversity(new University("AITU", "Astana"));
         manager.addUniversity(new University("KBTU", "Almaty"));
+        University uni = new University("KBTU", "Almaty");
+        System.out.println(uni);
 
         // Filtering
         System.out.println("Courses with credits >= 4:");
@@ -28,5 +30,22 @@ public class Main {
         // Sorting
         System.out.println("\nUniversities sorted by name:");
         manager.sortUniversitiesByName().forEach(System.out::println);
+
+        //ExchangeUniversity
+        System.out.println("\n=== Exchange University Program ===");
+        ExchangeUniversity exchangeUni = new ExchangeUniversity("AITU", "Astana", "Alice Johnson", "MIT", 3.9);
+        System.out.println(exchangeUni);
+
+        // updated info
+        exchangeUni.setStudentName("Bob Smith");
+        exchangeUni.setCurrentUniversity("Harvard");
+        exchangeUni.setGpa(3.8);
+
+        System.out.println("Updated: " + exchangeUni);
+
+        ExchangeUniversity anotherExchangeUni = new ExchangeUniversity(
+                "AITU", "Astana", "Bob Smith", "Harvard", 3.8);
+
+        System.out.println("Universities are equal: " + exchangeUni.equals(anotherExchangeUni));
     }
 }

@@ -35,7 +35,7 @@ public class University {
     // Override toString
     @Override// Polymorphism: Method Overriding
     public String toString() {
-        return "University{name='" + name + "', location='" + location + "'}";
+        return "University name=" + name + ", location=" + location;
     }
     // Override equals
     @Override
