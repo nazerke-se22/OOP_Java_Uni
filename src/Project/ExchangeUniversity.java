@@ -1,8 +1,9 @@
+//inheritance
 package Project;
 
 import java.util.Objects;
 
-public class ExchangeUniversity extends University {
+public class ExchangeUniversity extends University {//конструктор 1
     private String studentName;
     private String currentUniversity;
     private double gpa;
@@ -14,7 +15,7 @@ public class ExchangeUniversity extends University {
         this.gpa = gpa;
     }
 
-    public ExchangeUniversity() {
+    public ExchangeUniversity() {//конструктор 2
         super();
         this.studentName = "Katty Nell";
         this.currentUniversity = "Korea University";
